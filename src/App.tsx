@@ -199,7 +199,18 @@ export default function App() {
 
     setEditData(null);
     setPhotoPreview(null);
-    reset();
+    reset({
+      prefix: "",
+      firstName: "",
+      lastName: "",
+      photoUrl: "",
+      history: "",
+      achievement: "",
+      position: "",
+      ministry: "",
+      party: "",
+      province: "", // ถ้ามี field province
+    });
     setShowForm(false);
   };
 
