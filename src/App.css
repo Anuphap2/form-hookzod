@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@100;200;300;400;500;600;700&display=swap");
+@import "tailwindcss";
+* {
+  font-family: "IBM Plex Sans Thai", sans-serif;
+  line-height: 1.5;
+  box-sizing: border-box;
+}
+body {
+  margin: 0px;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease-in-out;
+}
+.input {
+  @apply border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400;
+}
