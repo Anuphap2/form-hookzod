@@ -1,14 +1,16 @@
 import { z } from "zod";
 
 export const mpSchema = z.object({
-  prefix: z.string().min(1, "กรุณาใส่คำนำหน้า"),
-  firstName: z.string().min(1, "กรุณาใส่ชื่อ"),
-  lastName: z.string().min(1, "กรุณาใส่นามสกุล"),
-  photoUrl: z.string().url("กรุณาใส่ URL รูปภาพที่ถูกต้อง"),
+  prefix: z.string().min(1),
+  firstName: z.string().min(1),
+  lastName: z.string().min(1),
+  photoUrl: z.string().optional(),
   history: z.string().optional(),
   achievement: z.string().optional(),
   position: z.string().optional(),
   ministry: z.string().optional(),
-  party: z.string().min(1, "กรุณาใส่พรรค"),
-  province: z.string().nullable().optional(),
+  party: z.string().min(1),
+  province: z.string().min(1),
 });
+
+export type MP = z.infer<typeof mpSchema> & { id: string };
