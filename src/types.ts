@@ -9,4 +9,5 @@ export type MP = {
     position: string;
     ministry: string;
     party: string;
+    province?: string | null; // 👈 เพิ่มอันนี้
 };
